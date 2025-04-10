@@ -262,8 +262,8 @@ def compare_two_scenarios_game1(
 ################################################################################
 
 def simulate_portfolio_game2(
-    num_runs=10000, years=5, F=5, rho=0.3, 
-    stop_size_bps=100, annual_IR=1.0, 
+    num_runs=10000, years=5, F=5, rho=0.0, 
+    stop_size_bps=2, annual_IR=0.125, 
     initial_capital=0, sample_paths=20
 ):
     """
