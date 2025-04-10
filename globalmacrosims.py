@@ -263,7 +263,7 @@ def compare_two_scenarios_game1(
 
 def simulate_portfolio_game2(
     num_runs=10000, years=5, F=5, rho=0.0, 
-    stop_size_bps=2, annual_IR=0.125, 
+    stop_size_bps=100, annual_IR=1.0, 
     initial_capital=0, sample_paths=20
 ):
     """
@@ -663,16 +663,16 @@ def run_game2_page():
 
     st.subheader("Scenario #1 Parameters")
     F_1 = st.number_input("Average Frequency (F) [Scenario 1]", value=5, step=1)
-    rho_1 = st.slider("Correlation (rho) [Scenario 1]", 0.0, 1.0, 0.3, 0.01)
-    stop_bps_1 = st.number_input("Stop Size (bps) [Scenario 1]", value=100, step=1)
-    ir_1 = st.number_input("Annual IR (Scenario 1)", value=1.0, format="%.3f")
+    rho_1 = st.slider("Correlation (rho) [Scenario 1]", 0.0, 1.0, 0.0, 0.01)
+    stop_bps_1 = st.number_input("Stop Size (bps) [Scenario 1]", value=2.5, step=1)
+    ir_1 = st.number_input("Annual IR (Scenario 1)", value=0.125, format="%.3f")
     initcap_1 = st.number_input("Initial Capital [Scenario 1]", value=0.0, format="%.2f")
 
     st.subheader("Scenario #2 Parameters")
     F_2 = st.number_input("Average Frequency (F) [Scenario 2]", value=10, step=1)
-    rho_2 = st.slider("Correlation (rho) [Scenario 2]", 0.0, 1.0, 0.2, 0.01)
-    stop_bps_2 = st.number_input("Stop Size (bps) [Scenario 2]", value=200, step=1)
-    ir_2 = st.number_input("Annual IR (Scenario 2)", value=0.5, format="%.3f")
+    rho_2 = st.slider("Correlation (rho) [Scenario 2]", 0.0, 1.0, 0.0, 0.01)
+    stop_bps_2 = st.number_input("Stop Size (bps) [Scenario 2]", value=5, step=1)
+    ir_2 = st.number_input("Annual IR (Scenario 2)", value=0.125, format="%.3f")
     initcap_2 = st.number_input("Initial Capital [Scenario 2]", value=0.0, format="%.2f")
 
     num_sims = st.number_input("Number of Simulations", value=5000, step=1000)
